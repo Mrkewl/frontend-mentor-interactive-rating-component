@@ -1,0 +1,52 @@
+@import "../main.scss";
+
+.container-thank-you {
+  max-width: 45vh;
+  height: 45vh;
+  @media only screen and (max-width: $bp-smallest) {
+    max-width: 90vw;
+    height: 55vh;
+  }
+  background-image: linear-gradient(
+    to right bottom,
+    $Dark-Blue 150%,
+    $Very-Dark-Blue 150%
+  );
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.icon {
+  background-image: url(../images/illustration-thank-you.svg);
+  width: 50%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+}
+.selected {
+  margin-top: -2rem;
+  font-size: 1.4rem;
+  padding: 10px;
+  background-image: linear-gradient(
+    to right bottom,
+    $Dark-Blue 10%,
+    $Medium-Grey 100%,
+  );
+  border-radius: 20px;
+  color: $Orange;
+}
+
+.thankyou {
+  font-size: 3.4rem;
+}
+
+.paragraphthanks {
+  font-size: 1.95rem;
+  padding: 20px;
+  color: $Light-Grey;
+}

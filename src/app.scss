@@ -1,0 +1,120 @@
+@import "./main";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $Very-Dark-Blue;
+  color: $White;
+  @media only screen and (max-width: $bp-smallest) {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 45vh;
+  height: 45vh;
+  @media only screen and (max-width: $bp-smallest) {
+    max-width: 90vw;
+    height: 55vh;
+  }
+
+  background-image: linear-gradient(
+    to right bottom,
+    $Very-Dark-Blue -200%,
+    $Dark-Blue
+  );
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &-icon-star {
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(
+      to right bottom,
+      $Dark-Blue 150%,
+      $Very-Dark-Blue 150%
+    );
+    margin: 20px;
+    border-radius: 360%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 1px white;
+    &-image {
+      width: 50px;
+      height: 50px;
+      background-image: url(./images/icon-star.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &-heading {
+    margin-left: 20px;
+    font-size: 3rem;
+  }
+  &-paragraph {
+    margin-left: 20px;
+    margin-top: 20px;
+    line-height: 3rem;
+    margin-right: 20px;
+    font-size: 2.1rem;
+    color: $Light-Grey;
+  }
+  &-ratings {
+    display: flex;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    justify-content: space-around;
+
+    li {
+      background-color: linear-gradient(
+        to right bottom,
+        $Dark-Blue 100%,
+        $Very-Dark-Blue -20%
+      );
+      box-shadow: 0px 0px 1px white;
+      display: flex;
+      width: 50px;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      //   background-color: $;
+      border-radius: 360%;
+    }
+    li:hover {
+      content: "";
+      color: black;
+      background-image: linear-gradient(
+        to right bottom,
+        $White 100%,
+        $Dark-Blue 100%
+      );
+      z-index: 3;
+    }
+  }
+  .buttona {
+    text-decoration: none;
+    height: 13%;
+    background-color: $Orange;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    font-size: 2.2rem;
+    color: white;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
